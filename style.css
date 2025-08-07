@@ -12,7 +12,7 @@
     --bg-color-three: #e2e8f0;
 
     font: 10px sans-serif;
-    color: white;
+    /* color: white; */
 }
 
 body {
@@ -41,6 +41,7 @@ body {
     grid-row: 1 / -1;
 
     font-size: 2rem;
+    color: white;
     padding: 2rem 0 2rem 2rem;
 }
 
@@ -59,6 +60,20 @@ body {
 .header {
     background-color: var(--bg-color-two);
     grid-column: 2 / -1;
+
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+}
+
+.header-top {
+    background-color: lightgreen;
+
+    display: grid;
+    grid-template-columns: 4fr 2fr;
+}
+
+.header-bottom {
+    background-color: lightcoral;
 }
 
 .main-content {
