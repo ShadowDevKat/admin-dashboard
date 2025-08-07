@@ -7,19 +7,74 @@
 }
 
 :root {
-    --color-one: lightblue;
-    --color-two: lightgreen;
-    --color-three: lightcoral;
+    --bg-color-one: #1992d4;
+    --bg-color-two: #ffffff;
+    --bg-color-three: #e2e8f0;
+
+    font: 10px sans-serif;
+    color: white;
 }
 
 body {
     height: 100vh;
-    width: 100vh;
 
-    background-image: url(reference.png);
+    background-color: lightgray;
+
+    /* background-image: url(reference.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
     background-color: rgba(255,255,255,0.4);
-    background-blend-mode: lighten;
+    background-blend-mode: lighten; */
+}
+
+.main-container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 4fr;
+}
+
+.sidebar {
+    background-color: var(--bg-color-one);
+    grid-column: span 1;
+    grid-row: 1 / -1;
+
+    font-size: 2rem;
+    padding: 2rem 0 2rem 2rem;
+}
+
+.sidebar a {
+    color: white;
+}
+
+.sidebar a:hover {
+    color: black;
+}
+
+.sidebar>div {
+    padding-bottom: 40px;
+}
+
+.header {
+    background-color: var(--bg-color-two);
+    grid-column: 2 / -1;
+}
+
+.main-content {
+    background-color: var(--bg-color-three);
+    grid-column: 2 / -1;
+}
+
+.icon {
+    filter: invert(1);
+    width: 20px;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
 }
