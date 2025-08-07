@@ -72,11 +72,40 @@ body {
     grid-template-columns: 4fr 2fr;
 }
 
+.search-bar {
+    padding: 1rem;
+
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+.user-info {
+    padding: 1rem;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+}
+
 .header-bottom {
     background-color: lightcoral;
 
     display: grid;
     grid-template-columns: 4fr 2fr;
+}
+
+.user-detail {
+    padding: 1rem;
+
+    display: grid;
+    grid-template-columns: 1fr 10fr;
+}
+
+.user-actions {
+    padding: 1rem;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
 }
 
 .main-content {
@@ -94,16 +123,54 @@ body {
     grid-row: 1 / -1;
 }
 
+.project-container {
+    height: 90%;
+    padding: 2rem;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(auto-fit, 1fr);
+    gap: 50px;
+}
+
+.project-card {
+    background-color: gray;
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+}
+
 .announcement-section {
     background-color: lightyellow;
     grid-column: 2 / -1;
     grid-row: 1 / 2;
 }
 
+.announcement-container {
+    height: 90%;
+    padding: 2rem;
+
+    display: grid;
+    grid-template-rows: repeat(auto-fit, 1fr);
+    gap: 25px;
+}
+
 .trending-section {
     background-color: lightcyan;
     grid-column: 2 / -1;
     grid-row: 2 / -1;
+}
+
+.trending-container {
+    padding: 2rem;
+
+    display: grid;
+    grid-template-rows: repeat(auto-fit, 1fr);
+    gap: 25px;
+}
+
+.trending-item>a {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
 }
 
 .icon {
