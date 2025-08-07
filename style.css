@@ -74,11 +74,36 @@ body {
 
 .header-bottom {
     background-color: lightcoral;
+
+    display: grid;
+    grid-template-columns: 4fr 2fr;
 }
 
 .main-content {
     background-color: var(--bg-color-three);
     grid-column: 2 / -1;
+
+    display: grid;
+    grid-template-columns: 4fr 2fr;
+    grid-template-rows: 2fr 2fr;
+}
+
+.project-section {
+    background-color: lightsalmon;
+    grid-column: span 1;
+    grid-row: 1 / -1;
+}
+
+.announcement-section {
+    background-color: lightyellow;
+    grid-column: 2 / -1;
+    grid-row: 1 / 2;
+}
+
+.trending-section {
+    background-color: lightcyan;
+    grid-column: 2 / -1;
+    grid-row: 2 / -1;
 }
 
 .icon {
