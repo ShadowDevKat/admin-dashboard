@@ -178,6 +178,16 @@ body {
     width: 20px;
 }
 
+.avatar-small {
+    height: auto;
+    width: 40px;
+}
+
+.avatar-large {
+    height: auto;
+    width: 80px;
+}
+
 li {
     list-style: none;
 }
