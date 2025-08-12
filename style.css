@@ -18,6 +18,7 @@ a {
     --primary-color: #1992d4;
     --default-color: #ffffff;
     --secondary-color: #e2e8f0;
+    --accent-color: #f0b832;
 
     --filter-white: invert(100%) sepia(99%) saturate(0%) hue-rotate(197deg) brightness(105%) contrast(100%);
     --filter-black: invert(0%) sepia(100%) saturate(0%) hue-rotate(253deg) brightness(107%) contrast(103%);
@@ -113,8 +114,9 @@ body {
 
     display: grid;
     grid-template-rows: 1fr 2fr;
-    /* box-shadow: 0px 10px 0px 0px rgba(0,0,0,0.2);
-    position: relative;     */
+    margin-bottom: 2px;
+    box-shadow: 0px 2px 0px 0px rgba(255, 255, 255, 0.2);
+    position: relative;
 }
 
 /* Header top */
@@ -224,40 +226,85 @@ body {
     grid-column: 2 / -1;
 
     display: grid;
-    grid-template-columns: 4fr 2fr;
+    grid-template-columns: 4fr 1.5fr;
     grid-template-rows: 2fr 2fr;
+    gap: 1.5rem;
+
+    padding: 1rem 3rem 2rem 3rem;
 }
 
+.main-content>div>h1 {
+    font-size: 2.5rem;
+}
+
+.project-section,
+.announcement-section,
+.trending-section {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 1rem;
+}
+
+.rounded-box {
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Projects */
+
 .project-section {
-    background-color: lightsalmon;
     grid-column: span 1;
     grid-row: 1 / -1;
 }
 
 .project-container {
-    height: 90%;
-    padding: 2rem;
-
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(auto-fit, 1fr);
-    gap: 50px;
+    gap: 3rem;
 }
 
 .project-card {
-    background-color: gray;
+    background-color: var(--default-color);
+    border-left: 1.2rem solid var(--accent-color);
+    padding: 2rem 2rem 1rem 2rem;
     display: grid;
-    grid-template-rows: 2fr 1fr;
+    grid-template-rows: auto auto;
+
+    align-content: space-around;
+    align-items: center;
 }
 
+.project-info>h2 {
+    font-size: 2.5rem;
+}
+.project-info>p{
+    font-size: 2rem;
+}
+
+.project-links {
+    justify-self: end;
+    align-self: end;
+    
+    display: flex;
+    gap: 3rem;
+}
+
+.project-icon {
+    filter: var(--filter-black);
+    height: 25px;
+    width: 25px;
+}
+
+/* Announcements */
+
 .announcement-section {
-    background-color: lightyellow;
     grid-column: 2 / -1;
     grid-row: 1 / 2;
 }
 
 .announcement-container {
-    height: 90%;
+    background-color: var(--default-color);
     padding: 2rem;
 
     display: grid;
@@ -265,13 +312,15 @@ body {
     gap: 25px;
 }
 
+/* Trending */
+
 .trending-section {
-    background-color: lightcyan;
     grid-column: 2 / -1;
     grid-row: 2 / -1;
 }
 
 .trending-container {
+    background-color: var(--default-color);
     padding: 2rem;
 
     display: grid;
