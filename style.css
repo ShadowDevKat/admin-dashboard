@@ -38,6 +38,15 @@ body {
     grid-template-rows: 1fr 4fr;
 }
 
+a {
+    transform: scale(1);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+a:hover {
+    transform: scale(1.1);
+}
+
 /* Sidebar styles */
 
 .sidebar {
@@ -74,12 +83,6 @@ body {
     color: var(--default-color);
     width: 100%;
     height: 100%;
-    transform: scale(1);
-    transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.sidebar a:hover {
-    transform: scale(1.1);
 }
 
 .sidebar-logo,
@@ -348,8 +351,8 @@ body {
     justify-content: start;
     align-items: center;
 
-    grid-template-areas: 
-    "image user";
+    grid-template-areas:
+        "image user";
 
     color: black;
 }
@@ -357,13 +360,16 @@ body {
 .trending-item>a>img {
     grid-area: image;
 }
+
 .trending-item>a>div {
     grid-area: user;
 }
-.trending-item>a h2{
+
+.trending-item>a h2 {
     font-size: 2rem;
 }
-.trending-item>a p{
+
+.trending-item>a p {
     font-size: 2rem;
 }
 
